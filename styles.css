@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+background-color: #f1f1f1;
+font: normal 16px 'Roboto', sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none; /* отключить все украшения у ссылок*/
+}
+
+a:hover {  /* действие при наведении на ссылку*/
+    text-decoration: underline;
+}
+a:active { color: blue;}   /* при нажатии ссылка будет синей */
+a:visited { color: #86898f;} /* менять цвет уже посещенной ссылки */
+
+.avatar {
+    width: 350px;
+    border-radius: 25px;  /* скругление картинки*/
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 025);  /* тень вокруг картики*/
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: 75%;
+}
+
+.work { 
+    width: 100%;
+}
+.work-table {
+width: 90%;
+margin-right: 0px;
+}
+.work-table th {
+    text-align: left;
+}
+
+
+.info p {   /* настройка исключительно парагрофов в контейнере */
+    color: #86898f;
+}
+.info {
+    display: flex;
+}
+
+.info-text {
+    padding-left: 50px;
+}
+
+@media (max-width: 700px) {    /* при уменьшении размера браузера данная медиа сработает (на ширине до 700пксилей)*/
+    .info { 
+        display: block;
+        text-align: center; /* при уменьшении размера браузера -  текст будет по центру*/
+    }
+
+}
+
+/*.social {
+    background: #00BCD4;    
+    padding: 10px;
+    border: 15px solid #BDBDBD;  /* обязательно укажи стиль*/
+/*    margin: 5px;} */ 
+
+.form-bottom label {
+    display: block;   /* установить название формы над самой формой */
+}
+
+.form-bottom input,
+.form-bottom textarea {      /* дополнительно для текст ареа так как она не инпут)) */
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 5px 0px 10px;
+    background: transparent; /* формы стали прозрачными*/
+    border: none;    /* убрать рамки форм */
+    border-bottom: 1px solid #ccc;
+    outline: none;   /* убрать рамки при нажатии на форму*/
+    font-family: inherit;  /* приказ использовать шрифт сайта*/
+}
+.lable-bot { display: flex;}   /* группировка в линию по горизонтали*/
+
+.lable-bot > .form-bottom {
+    width: 50%;
+    margin-right: 10px;    /*   подрезать лейблы чтобы не впивались в друг друга*/
+}
+
+.btn-bot {
+    background: #111;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer; 
+}
+.btn-bot:hover {
+    opacity: 90%;
+}
